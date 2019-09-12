@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.issell.server&apos; to &apos;Sera&apos;sMeatBall_Server/src&apos;&#x0D;&#x0A;- Original project: &apos;Sera&apos;sMeatBall_Cilent&apos;&#x0D;&#x0A;- Destination element: &apos;Sera&apos;sMeatBall_Server/src&apos;&#x0D;&#x0A;- Original element: &apos;Sera&apos;sMeatBall_Cilent/src/com.issell.server&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=Sera\&apos;sMeatBall_Server/src" element1="/src&lt;com.issell.server" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1554185783192" version="1.0"/>
+</session>

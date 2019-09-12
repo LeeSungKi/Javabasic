@@ -1,0 +1,12 @@
+package quiz;
+
+public class Student {
+	public static int numCount = 1;
+	
+	private String name;
+	private int year;
+	private int month;
+	private int date;
+	
+	private int num;
+}

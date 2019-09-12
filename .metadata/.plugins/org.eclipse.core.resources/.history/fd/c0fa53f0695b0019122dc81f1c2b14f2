@@ -1,0 +1,46 @@
+package basic;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+
+import javax.swing.JOptionPane;
+
+// 클라이언트 측 프로그램
+public class Test03 {
+	public static void main(String[] args) {
+		Socket soc = null;
+		BufferedWriter writer = null; // 서버에게 데이터를 보낼 OutputStream
+		BufferedReader reader = null; // 서버로부터 데이터를 받을 InputStream
+		try {
+			soc = new Socket("127.0.0.1", 3000); // 서버의 IP, 포트번호 
+			// 소켓 생성 == 서버와 바인딩
+			// : 소켓이 생성되면 서버특의 accept() 메서드가 실행 완료됨
+			
+			// 스트림 생성
+			reader = new BufferedReader(new InputStreamReader(soc.getInputStream()));
+			writer = new BufferedWriter(new OutputStreamWriter(soc.getOutputStream()));
+					
+			while(true) {
+				String s = JOptionPane.showInputDialog("서버에게 보낼 메시지(종료는 exit)");
+				if(s.equals("exit")) {
+					break;
+				}
+				writer.write(s);
+				writer.newLine();
+				writer.flush();
+			}
+			
+		} catch(Exception e) { 
+			e.printStackTrace();
+		} finally {
+			try { 
+				if(soc != null) { soc.close(); }
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

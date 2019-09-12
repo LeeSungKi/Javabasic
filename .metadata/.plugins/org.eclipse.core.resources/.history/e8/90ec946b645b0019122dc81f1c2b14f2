@@ -1,0 +1,33 @@
+package basic;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+/*
+ * < TCP 소켓 통신 프로그램 >
+ * - 소켓(socket)이란?
+ *   서버 - 클라이언트 간의 연결 정보를 담고 있음
+ *   서버는 '서버소켓'을 열어두고 클라이언트 접속을 대기..
+ *   클라이언트가 서버를 향한 '소켓'을 생성하면 서버와 바인딩(연결)됨  
+ */
+public class Test02 {
+	public static void main(String[] args) {
+		// 1. 서버소켓 생성 + 클라이언트 접속 대기 
+		// 2. 바인딩 후 생성된 스트림을 얻어옴
+		// 3. 클라이언트의 데이터 송신을 기다림
+		// 4. 송신이 되면 수신된 데이터를 다시 클라이언트에게 보냄
+		// 5. 클라이언트 접속이 끊길 때까지 반복
+		try {
+			ServerSocket sSoc = new ServerSocket(3000); // 3000 : 포트 번호
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}
+
+
+
+
+
+

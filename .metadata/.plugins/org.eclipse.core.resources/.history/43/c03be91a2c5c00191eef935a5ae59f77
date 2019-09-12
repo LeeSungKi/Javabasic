@@ -1,0 +1,10 @@
+package myclient;
+
+import java.net.Socket;
+
+public class ServerReceiveThread extends Thread{
+	Socket clientSoc;
+	public ServerReceiveThread(Socket soc) {
+		clientSoc = soc;
+	}
+}

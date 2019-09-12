@@ -1,0 +1,36 @@
+package myclient;
+
+import java.net.ServerSocket;
+
+public class ServerMain {
+	public ServerMain() {
+		System.out.println("서버 가동!!");
+		
+		ServerSocket sSoc = null;
+		try {
+			sSoc = new ServerSocket(3000);
+			ServerSendThread sst = new ServerSendThread();
+			ServerReceiveThread srt = new ServerReceiveThread();
+			
+			// 서버측의 송신 스레드 시작
+			sst.start();
+			
+			// 서버측의 수신 스레드 시작
+			srt.start();
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try { 
+				if( sSoc != null ) {
+					sSoc.close();
+				}
+			} catch(Exception e) { e.printStackTrace(); }
+		}
+		System.out.println("서버 종료!!");
+	}
+	
+	
+	public static void main(String[] args) {
+		new ServerMain();
+	}
+}

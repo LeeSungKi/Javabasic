@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;Day05/src/quiz&apos;&#x0D;&#x0A;- Original project: &apos;chapter17_primitive_array&apos;&#x0D;&#x0A;- Destination element: &apos;Day05/src/quiz&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.javalec.quiz.Quiz03.java&#x0D;&#x0A;     com.javalec.quiz.Quiz02.java&#x0D;&#x0A;     com.javalec.quiz.Quiz01.java" description="Copy compilation units" destination="=Day05/src&lt;quiz" element1="/src&lt;com.javalec.quiz{Quiz03.java" element2="/src&lt;com.javalec.quiz{Quiz02.java" element3="/src&lt;com.javalec.quiz{Quiz01.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1552975774304" units="3" version="1.0"/>
+</session>

@@ -1,0 +1,22 @@
+package quiz;
+
+import java.text.SimpleDateFormat;
+
+public class Quiz01 {
+	/*
+	 * 메뉴 )
+	 *   1. 학생등록
+	 *   2. 종료하기
+	 *   학생등록 : 학생의 이름, 생년월일, 점수(국영수)를 입력 받는다.
+	 *   		  생년월일은 6자리를 입력 받고 year, month,date에 각각 저장
+	 *           나이, 평균, 학점, 번호 자동 계산되어 저장
+	 *           * 번호 : 1번부터 순차적으로 매겨짐
+	 *   종료하기 : YYYY_MM_DD_HH_mm_students.dat 에 모든 학생들을 저장한 후 종료
+	 */
+	
+	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("YYYY_MM_DD_mm");
+	
+	public static void main(String[] args) {
+		
+	}
+}

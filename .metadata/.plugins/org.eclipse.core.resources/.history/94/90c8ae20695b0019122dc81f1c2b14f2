@@ -1,0 +1,8 @@
+package basic;
+
+// 클라이언트 측 프로그램
+public class Test03 {
+	public static void main(String[] args) {
+		
+	}
+}

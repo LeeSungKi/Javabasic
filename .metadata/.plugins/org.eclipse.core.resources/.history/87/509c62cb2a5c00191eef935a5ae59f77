@@ -1,0 +1,10 @@
+package myclient;
+
+public class ServerSendThread extends Thread{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+
+}

@@ -1,0 +1,53 @@
+package quiz;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Quiz02 {
+	public static void main(String[] args) {
+		// Quiz01에서 저장된 파일의 목록을 쭉 출력하고 
+		// 파일 1개 선택 받아 (정수 입력, X번 파일) 해당 학생들의 정보를 JOP으로 출력
+		File dir= new File(Quiz01.DIRECTORY);
+		File[] files = dir.listFiles();
+		StringBuffer menu = new StringBuffer();
+		int index = 0;
+		for(File f : files) {
+			menu.append(index++ + "번. " + f.getName() + "\n");
+		}
+		menu.append("선택하세요.");
+		index = Integer.parseInt(JOptionPane.showInputDialog(menu));
+		
+		
+		ArrayList<Student> list = null;
+		ObjectInputStream oIn = null;
+		try {
+			oIn = new ObjectInputStream(new FileInputStream(files[index]));
+			list = (ArrayList<Student>)oIn.readObject();
+			StringBuffer message = new StringBuffer("==================== 학생 정보 ===================\n");
+			for(Student s : list) {
+				message.append("번호 : " + s.getNum() + "번\n");
+				message.append("이름 : " + s.getName() + "\n");
+				message.append("나이 : " + s.getAge() + " 세\n");
+				message.append("생일 : " + s.getMonth() + "월 " + s.getDate() + "일\n");
+				message.append("국어 : " + s.getKr() + "\n");
+				message.append("영어 : " + s.getEn() + "\n");
+				message.append("수학 : " + s.getMa() + "\n");
+				message.append("평균 : " + String.format("%.2f", s.getAvg()) + "점\n");
+				message.append("등급 : " + s.getGrade() + " 등급\n");
+				message.append("================================================\n");
+			}
+			JOptionPane.showMessageDialog(null, message);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(oIn != null) { oIn.close(); }
+			} catch(Exception e) { e.printStackTrace();}
+		}
+		
+	}
+}

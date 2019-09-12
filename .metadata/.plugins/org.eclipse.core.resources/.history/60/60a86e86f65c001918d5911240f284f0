@@ -1,0 +1,40 @@
+package test;
+
+import java.awt.CardLayout;
+import java.awt.Color;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Test01 extends JPanel{
+	
+	JPanel rightPanel;
+	JPanel leftPanel;
+	CardLayout layout;
+	public Test01() {
+		rightPanel = new JPanel();
+		leftPanel = new JPanel();
+		layout = new CardLayout(3);
+		
+		
+		JPanel p1 = new JPanel();
+		p1.setBackground(Color.RED);
+		
+		JPanel p2 = new JPanel();
+		p1.setBackground(Color.BLUE);
+		
+		JPanel p3 = new JPanel();
+		p1.setBackground(Color.BLUE);
+		
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		JFrame jFrame = new JFrame();
+		jFrame.setVisible(true);
+		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jFrame.add(new Test01());
+	}
+}

@@ -1,0 +1,49 @@
+package myclient;
+
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+
+import javax.swing.JOptionPane;
+
+public class ClientSendThread extends Thread {
+	
+	Socket soc;
+	public ClientSendThread(Socket s) {
+		soc = s;
+	}
+	
+	
+	@Override
+	public void run() {
+		BufferedWriter bw = null;
+		try {
+			// 송신 스트림 생성
+			bw = new BufferedWriter(new OutputStreamWriter(soc.getOutputStream()));
+			while(soc != null) {
+				String toServer = JOptionPane.showInputDialog(null, "서버에게..(종료 exit)");
+				if(toServer.equals("exit")) {
+					break;
+				}
+				bw.write("from Client : " + toServer);
+				bw.newLine();
+				bw.flush();
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(bw != null) { bw.close(); }
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

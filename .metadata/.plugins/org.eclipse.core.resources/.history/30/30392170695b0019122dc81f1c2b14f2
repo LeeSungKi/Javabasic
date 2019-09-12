@@ -1,0 +1,25 @@
+package basic;
+
+import java.net.Socket;
+
+// 클라이언트 측 프로그램
+public class Test03 {
+	public static void main(String[] args) {
+		Socket soc = null;
+		try {
+			soc = new Socket("127.0.0.1", 3000); // 서버의 IP, 포트번호 
+			// 소켓 생성 == 서버와 바인딩
+			// : 소켓이 생성되면 서버특의 accept() 메서드가 실행 완료됨
+			
+			
+		} catch(Exception e) { 
+			e.printStackTrace();
+		} finally {
+			try { 
+				if(soc != null) { soc.close(); }
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

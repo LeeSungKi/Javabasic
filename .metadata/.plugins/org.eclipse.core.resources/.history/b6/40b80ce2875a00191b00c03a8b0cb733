@@ -1,0 +1,59 @@
+package basic;
+/*
+ * < ObejctIn/OutStream >
+ * - 인스턴스를 전송할 때 사용하는 IO 스트림 
+ * - 보조스트림 ( 주스트림을 보조하는 역할이므로, 주스트림을 먼저 만들고 보조스트림으로 포장하여 사용 )
+ * - IO 스트림으로 전송되는 인스턴스는 반드시 implements Serializable 해야 한다.
+ */
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.io.Serializable;
+
+class Pokemon implements Serializable {
+	String name;
+	int level;
+	int hp;
+	
+	Pokemon(String n, int lv, int h){
+		name = n;
+		level = lv;
+		hp = h;
+	}
+	
+	public String toString() {
+		return "[" + name + "/Lv." + level + "/Hp." + hp +"]";
+	}
+}
+public class Test01 {
+	public static void main(String[] args) {
+		OutputStream o = null;
+		ObjectOutputStream oOut = null;
+		
+		try {
+			// 1. 주스트림 만들기
+			o = new FileOutputStream("sample.pok");
+			
+			// 2. Object 스트림 만들기 
+			oOut = new ObjectOutputStream(o);
+			
+			// 3. 인스턴스 내보내기 
+			oOut.writeObject(new Pokemon("피카츄", 10, 200));
+			oOut.writeObject(new Pokemon("라이츄", 20, 400));
+			oOut.writeObject(new Pokemon("푸린", 15, 300));
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 4. 스트림 닫기
+			
+		}
+	}
+}
+
+
+
+
+

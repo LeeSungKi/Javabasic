@@ -1,0 +1,14 @@
+package basic;
+/*
+ * < 네트워크 프로그래밍 >
+ * - java.net 패키지
+ * - TCP 통신 : 신뢰성 프로토콜 
+ * 		--> 호스트 간의 패킷수신을 확인한 뒤 다음 패킷을 전송하는 형태
+ * 
+ *   UDP 통신 : 비신뢰성 프로토콜
+ */
+public class Test01 {
+	public static void main(String[] args) {
+		
+	}
+}

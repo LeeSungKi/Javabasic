@@ -1,0 +1,23 @@
+package quiz;
+
+public class Student {
+	public static int numCount = 1;
+	
+	private String name;
+	private int year;
+	private int month;
+	private int date;
+	private int num;
+	private int kr;
+	private int en;
+	private int ma;
+	private double avg;
+	private String grade;
+	
+	public Student() {
+		
+	}
+	public Student(String name, String birth, int kr, int en, int ma) {
+		
+	}
+}

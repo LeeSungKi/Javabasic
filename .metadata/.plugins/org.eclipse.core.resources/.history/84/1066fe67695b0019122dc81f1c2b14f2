@@ -1,0 +1,22 @@
+package basic;
+
+import java.net.Socket;
+
+// 클라이언트 측 프로그램
+public class Test03 {
+	public static void main(String[] args) {
+		Socket soc = null;
+		try {
+			soc = new Socket("127.0.0.1", 3000); // 서버의 IP, 포트번호 
+		
+		} catch(Exception e) { 
+			e.printStackTrace();
+		} finally {
+			try { 
+				if(soc != null) { soc.close(); }
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

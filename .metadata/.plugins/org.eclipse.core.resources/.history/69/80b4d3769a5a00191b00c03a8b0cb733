@@ -1,0 +1,115 @@
+package quiz;
+
+import javax.swing.JOptionPane;
+
+public class Student {
+	public static int numCount = 1;
+	
+	private String name;
+	private int year;
+	private int month;
+	private int date;
+	private int age; 
+	
+	private int num;
+	
+	private int kr;
+	private int en;
+	private int ma;
+	private double avg;
+	private String grade;
+	
+	
+	public Student(String name, String birth, int kr, int en, int ma) {
+		
+		
+		setName(name);
+		
+		
+	}
+	public static int getNumCount() {
+		return numCount;
+	}
+	public static void setNumCount(int numCount) {
+		Student.numCount = numCount;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	public int getDate() {
+		return date;
+	}
+	public void setDate(int date) {
+		this.date = date;
+	}
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
+	public int getKr() {
+		return kr;
+	}
+	public void setKr(int kr) {
+		this.kr = kr;
+	}
+	public int getEn() {
+		return en;
+	}
+	public void setEn(int en) {
+		this.en = en;
+	}
+	public int getMa() {
+		return ma;
+	}
+	public void setMa(int ma) {
+		this.ma = ma;
+	}
+	public double getAvg() {
+		return avg;
+	}
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	private void parseBirth(String birth) {
+		if(birth.length() != 6) {
+			JOptionPane.showMessageDialog(null, "생년월일은 6자리로 입력하세요.");
+			return;
+		}
+		int year = Integer.parseInt(birth.substring(0,2));
+		int month = Integer.parseInt(birth.substring(2,4));
+		int date = Integer.parseInt(birth.substring(4,6));
+		
+		if(year <= 70) {
+			
+		}
+	}
+}

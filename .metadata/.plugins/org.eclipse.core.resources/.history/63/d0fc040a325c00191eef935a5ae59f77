@@ -1,0 +1,17 @@
+package myserver;
+
+import java.net.Socket;
+
+public class ClientReceiveThread extends Thread{
+	Socket soc;
+	
+	public ClientReceiveThread(Socket s) {
+		soc = s;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}

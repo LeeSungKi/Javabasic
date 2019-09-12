@@ -1,0 +1,25 @@
+package myclient;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.Socket;
+
+public class ServerReceiveThread extends Thread{
+	Socket clientSoc;
+	public ServerReceiveThread(Socket soc) {
+		clientSoc = soc;
+	}
+	
+	public void run() {
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new InputStreamReader(clientSoc.getInputStream()));
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(br != null) { br.close(); }
+			}
+		}
+	}
+}

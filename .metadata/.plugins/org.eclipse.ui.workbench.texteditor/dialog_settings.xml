@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="setYear" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="setYear"/>
+			<item value="run()"/>
+			<item value="get("/>
+			<item value="add("/>
+			<item value="&quot;"/>
+			<item value="random("/>
+			<item value="Random"/>
+			<item value="random"/>
+			<item value="s2"/>
+			<item value="s1"/>
+			<item value="ceil"/>
+			<item value="getMaximum"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&apos;"/>
+			<item value="s3"/>
+			<item value="s2"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="288" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="1116" key="DIALOG_X_ORIGIN"/>
+		<item value="120" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

@@ -1,0 +1,16 @@
+package myserver;
+
+import java.net.Socket;
+
+public class ClientSendThread extends Thread {
+	
+	Socket soc;
+	public public ClientSendThread() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void run() {
+		
+	}
+}

@@ -1,0 +1,26 @@
+package basic;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class Test02 {
+	public static void main(String[] args) {
+		// Pokemon 인스턴스들을 (sample.pok) 읽어들이기 
+		
+		FileInputStream i = null;
+		ObjectInputStream oIn = null;
+		
+		try { 
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+			try {
+				if(oIn != null) { oIn.close(); }
+				if(i != null) { i.close(); }
+			} catch(Exception e) { e.printStackTrace();}
+		}
+ 		 
+	}
+}

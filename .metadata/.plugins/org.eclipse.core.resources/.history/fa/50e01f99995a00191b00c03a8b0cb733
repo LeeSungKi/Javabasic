@@ -1,0 +1,8 @@
+package quiz;
+
+public class Student {
+	public static int numCount = 1;
+	
+	public String name;
+	int num;
+}

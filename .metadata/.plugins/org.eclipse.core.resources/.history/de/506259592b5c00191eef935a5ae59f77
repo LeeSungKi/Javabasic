@@ -1,0 +1,35 @@
+package myclient;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.net.Socket;
+
+public class ServerSendThread extends Thread{
+	
+	Socket clientSoc;
+	
+	public ServerSendThread(Socket soc) {
+		clientSoc = soc; // ServerMain에서 연결된 클라이언트 소켓 받기
+	}
+	
+	@Override
+	public void run() {
+		BufferedReader rd = null;
+		BufferedWriter bw = null;
+		
+		try {
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(rd != null) { rd.close(); }
+				if(bw != null) { bw.close(); }
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

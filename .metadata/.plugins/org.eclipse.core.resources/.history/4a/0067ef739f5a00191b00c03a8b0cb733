@@ -1,0 +1,24 @@
+package quiz;
+
+import java.io.File;
+
+import javax.swing.JOptionPane;
+
+public class Quiz02 {
+	public static void main(String[] args) {
+		// Quiz01에서 저장된 파일의 목록을 쭉 출력하고 
+		// 파일 1개 선택 받아 (정수 입력, X번 파일) 해당 학생들의 정보를 JOP으로 출력
+		File dir= new File(Quiz01.DIRECTORY);
+		File[] files = dir.listFiles();
+		StringBuffer menu = new StringBuffer();
+		int index = 0;
+		for(File f : files) {
+			menu.append(index++ + "번. " + f.getName() + "\n");
+		}
+		menu.append("선택하세요.");
+		index = Integer.parseInt(JOptionPane.showInputDialog(menu));
+		
+		
+		
+	}
+}

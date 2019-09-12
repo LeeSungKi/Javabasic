@@ -1,0 +1,64 @@
+package test;
+
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Test01 extends JPanel{
+	
+	JPanel rightPanel;
+	JPanel leftPanel;
+	CardLayout layout;
+	public Test01() {
+		rightPanel = new JPanel();
+		leftPanel = new JPanel();
+		layout = new CardLayout();
+		
+		
+		JPanel p1 = new JPanel();
+		p1.setBackground(Color.RED);
+		
+		JPanel p2 = new JPanel();
+		p1.setBackground(Color.BLUE);
+		
+		JPanel p3 = new JPanel();
+		p1.setBackground(Color.BLUE);
+		
+		leftPanel.setLayout(layout);
+		leftPanel.add(p1); 
+		leftPanel.add(p2);
+		leftPanel.add(p3);
+		
+		
+		JButton jButton1 = new JButton("1");
+		JButton jButton2 = new JButton("2");
+		JButton jButton3 = new JButton("3");
+		
+		rightPanel.setLayout(new GridLayout(1, 3));
+		rightPanel.
+		
+		
+		ActionListener listener = new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JButton jButton = new JButton(); 
+				
+			}
+		};
+	}
+	
+	
+	public static void main(String[] args) {
+		JFrame jFrame = new JFrame();
+		jFrame.setVisible(true);
+		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jFrame.add(new Test01());
+	}
+}
